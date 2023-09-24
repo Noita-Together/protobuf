@@ -1,0 +1,16 @@
+{
+  "name": "protobuf",
+  "private": true,
+  "version": "1.1.0",
+  "packageManager": "yarn@3.5.1",
+  "scripts": {
+    "regenerate-proto": "pbjs -t static-module --wrap es6 --no-comments --no-delimited --out generated/messages.js messages.proto && pbjs -t static-module --no-delimited messages.proto | pbts -o generated/messages.d.ts -"
+  },
+  "dependencies": {
+    "protobufjs": "^6.10.2"
+  },
+  "devDependencies": {
+    "pbjs": "^0.0.14",
+    "prettier": "^2.8.8"
+  }
+}
